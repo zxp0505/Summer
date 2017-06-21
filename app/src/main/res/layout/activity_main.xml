@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xrefreshview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.summer.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="25dp"
+            android:paddingTop="9dp"
+            android:src="@drawable/nav_return" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="title" />
+    </RelativeLayout>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/refreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:background="#fff"
+        android:orientation="vertical"
+        xrefreshview:isHeightMatchParent="true"
+        xrefreshview:isWidthMatchParent="true">
+
+        <customviews.MyWebView
+            android:id="@+id/mywebview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"></customviews.MyWebView>
+    </com.andview.refreshview.XRefreshView>
+
+
+</RelativeLayout>
